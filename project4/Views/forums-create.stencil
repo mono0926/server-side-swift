@@ -1,0 +1,11 @@
+{% extends "master.stencil" %}
+
+{% block title %}Create Forum{% endblock %}
+
+{% block body %}
+<h1>Create forum</h1>
+<form method="post">
+<p>Name: <input type="text" name="name" /></p>
+<p><input type="submit" class="btn btn-lg" />
+</form>
+{% endblock %}

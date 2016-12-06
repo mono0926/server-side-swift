@@ -1,0 +1,58 @@
+<html>
+<body>
+
+{% if haters %}
+    <p>Haters are {{ haters }}.</p>
+{% endif %}
+
+{% if fakers %}
+    <p>Fakers are {{ fakers }}.</p>
+{% endif %}
+
+{% if names %}
+    <h1>Names:</h1>
+    <ul>
+    {% for name in names %}
+        {% if forloop.first %}
+            <li>The first name is {{ name|uppercase }}</li>
+        {% else %}
+            {% if forloop.last %}
+                <li>The last name is {{ name|uppercase }}</li>
+            {% else %}
+                <li>Name number {{ forloop.counter }} is {{ name|uppercase }}</li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<p>There are {{ names.count }} names:</p>
+<p>The first name is {{ names.first }}</p>
+<p>The second name is {{ names.1 }}</p>
+<p>The third name is {{ names.2 }}</p>
+
+{% if not names %}
+<p>There were no names.</p>
+{% endif %}
+
+{% if hamsters %}
+    <h1>Hamsters:</h1>
+    <ul>
+    {% for hamster in hamsters %}
+        <li>{{ hamster }}</li>
+    {% empty %}
+        <li>There are no hamsters :(</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{# This is a comment and will be ignored. #}
+
+{% include 'copyright.stencil' %}
+
+{% debug %}
+
+<h1>This is a test</h1>
+
+</body>
+</html>

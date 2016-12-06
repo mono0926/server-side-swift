@@ -1,0 +1,5 @@
+<select name="language" class="form-control">
+	{% for language in languages %}
+		<option>{{ language }}</option>
+	{% endfor %}
+</select>

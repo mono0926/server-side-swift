@@ -1,0 +1,9 @@
+{% extends "master.stencil" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+<h1>Code yourself happy</h1>
+<p class="lead">Need a coder in a hurry? List your project on Instant Coder and we'll match you with a coder available for work immediately, from all around the world.</p>
+<p><a class="btn btn-lg btn-primary" href="/projects/mine" role="button">Log in using GitHub &raquo;</a></p>
+{% endblock %}

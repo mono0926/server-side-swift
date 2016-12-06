@@ -1,0 +1,82 @@
+{
+	"docs": [
+		{
+			"type": "user",
+			"_id": "twostraws",
+			"salt": "b5c7daa3207e85cdc06e32a91e7717f2426d55bc2a1d09b1bc8dc4fedba40dd543307e411fe3c8415341396fd230c7f9c99b52f7103d5a56d7b1bdf98f55f02e",
+			"password": "a0e6ea6a2cedbc2de1e6a8b28d2db35643e00242f5d8167e978762f4e4f9742fb52f09e6e0a4111e93bc62b0981c4c6cee4bf60776beabc93773d583e80e35b9"
+		},
+		{
+			"type": "user",
+			"_id": "taylorswift13",
+			"salt": "76bdf75358b3b669099b6ef68507e312d9498801953645877db4a2014eb61c9bc4f8fce0f29b96156ef8bc6b07e873ca87777ec94964f5fdea48c64fc9d202ea",
+			"password": "677e402fd07ec0ad5ed1045f23e6468a4e35993713cc994d451e2dadc61f40fedfff327190d90c0cf05b060365a734655aa05a70711561d3cf67db426ed76cc4"
+		},
+		{
+			"type": "user",
+			"_id": "adele",
+			"salt": "3798ee5a2f72fa396cfa947b5d9e9fe59db190c8d3352194243b13bc373552975f4e8d6670b7e3cb6650cfa2366eca2fd5267e3780390aca0131e68903e36ff4",
+			"password": "6068e9623dcd6e80cf26bd27911db872dade357b6023159c05b2cbe81f32fb435c30811c354b7dd4d2c8b7a1752e1edcc4a669024ea311e43137b2960b60736e"
+		},
+		{
+			"_id": "songs",
+			"type": "forum",
+			"name": "Taylor's songs"
+		},
+		{
+			"_id": "videos",
+			"type": "forum",
+			"name": "Taylor's videos"
+		},
+		{
+			"_id": "example_message_1",
+			"type": "message",
+			"forum": "songs",
+			"user": "twostraws",
+			"date": "2016-12-01T14:00:00Z",
+			"title": "What's your favorite song?",
+			"body": "Mine is Shake it Off.",
+			"parent": ""
+		},
+		{
+			"_id": "example_reply_1",
+			"type": "message",
+			"forum": "songs",
+			"user": "taylorswift13",
+			"date": "2016-12-01T14:30:00Z",
+			"title": "",
+			"body": "You're right – Shake it Off is awesome!",
+			"parent": "example_message_1"
+		},
+		{
+			"_id": "example_reply_2",
+			"type": "message",
+			"forum": "songs",
+			"user": "adele",
+			"date": "2016-12-01T15:00:00Z",
+			"title": "",
+			"body": "What? Shake It Off is her worst song EVER. Bad Blood is WAY better.",
+			"parent": "example_message_1"
+		},
+		{
+			"_id": "example_message_2",
+			"type": "message",
+			"forum": "songs",
+			"user": "adele",
+			"date": "2016-12-02T11:00:00Z",
+			"title": "What are the lyrics to Blank Space?",
+			"body": "Please tell me!",
+			"parent": ""
+		},
+		{
+			"_id": "example_message_3",
+			"type": "message",
+			"forum": "videos",
+			"user": "adele",
+			"date": "2016-12-02T11:01:00Z",
+			"title": "Where can I buy Taylor's music videos?",
+			"body": "I'm tired of using YouTube.",
+			"parent": ""
+		}
+	]
+}

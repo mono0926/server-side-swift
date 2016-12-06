@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Enter an image URL: <input type="text" id="url" /></p>
+<p><button onClick="submitURL();">Submit</button></p>
+
+<pre id="output" style="font: 1px/1px monospace;"></pre>
+
+<script>
+function submitURL() {
+	var image = $("#url").val();
+	
+	$.get("/fetch", { url: image }, function(data) {
+		$("#output").text(data);
+    });
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>

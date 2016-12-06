@@ -1,0 +1,19 @@
+{% extends "master.stencil" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<h1>Taylor Swift Fan Club</h1>
+{% if username  %}
+<p>Welcome back, {{ username }}!</p>
+
+<ul>
+{% for forum in forums %}
+<li><a href="/forum/{{ forum.value._id }}">{{ forum.value.name }}</a></li>
+{% endfor %}
+</ul>
+
+{% else %}
+<a href="/users/login">Please log in.</a>
+{% endif %}
+{% endblock %}

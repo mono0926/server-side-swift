@@ -1,0 +1,17 @@
+{% extends "master.stencil" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block body %}
+<h1>Sign up</h1>
+<p class="lead">Welcome to Instant Coder, {{ display_name }}! Please select your primary programming language below so we can create an account for you:</p>
+
+<form method="post" action="/signup" style="max-width: 500px;">
+	<div class="form-group">
+		<label for="language">My primary programming language is…</label>
+		{% include 'languages.stencil' %}
+	</div>
+
+	<button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+{% endblock %}

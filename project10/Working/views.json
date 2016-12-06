@@ -1,0 +1,16 @@
+{
+	"views": {
+		"projects": {
+			"map" : "function(doc) { if (doc.type === 'project') { emit(null, doc); } }"
+		},
+		"projects_by_owner": {
+			"map" : "function(doc) { if (doc.type === 'project') { emit(doc.owner, doc); } }"
+		},
+		"projects_by_language": {
+			"map" : "function(doc) { if (doc.type === 'project') { emit(doc.language, doc); } }"
+		},
+		"coders_by_language": {
+			"map" : "function(doc) { if (doc.type === 'coder') { emit(doc.language, doc); } }"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"views": {
+		"forums": {
+			"map" : "function(doc) { if (doc.type === 'forum') { emit(null, doc); } }"
+		},
+		"forum_posts": {
+			"map" : "function(doc) { if (doc.type === 'message') { if (doc.parent === '') { emit(doc.forum, doc); } } }"
+		},
+		"forum_replies": {
+			"map" : "function(doc) { if (doc.type === 'message') { if (doc.parent !== '') { emit(doc.parent, doc); } } }"
+		}
+	}
+}

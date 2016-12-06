@@ -1,0 +1,7 @@
+{% extends "master.stencil" %}
+
+{% block body %}
+<p class="lead">{{ story.strap|markdown }}</p>
+<p>{{ story.content|markdown }}</p>
+{% endblock %}
+

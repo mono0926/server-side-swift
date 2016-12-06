@@ -1,0 +1,22 @@
+{% extends "master.stencil" %}
+
+{% block title %}{{ forum_name }}{% endblock %}
+
+{% block body %}
+<h1>{{ forum_name }}</h1>
+
+{% if messages %}
+<ul>
+{% for message in messages %}
+<li><a href="/forum/{{ forum_id }}/{{ message.id }}">{{ message.value.title }}</a> – posted by {{ message.value.user}} on {{ message.value.date|format_date }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<form method="post">
+<h3>Add a new post</h3>
+<p><input name="title" type="text" class="form-control" placeholder="Enter a title" /></p>
+<p><textarea name="body" class="form-control" rows="5"></textarea></p>
+<p><button type="submit" class="btn btn-lg">Post</button></p>
+
+{% endblock %}

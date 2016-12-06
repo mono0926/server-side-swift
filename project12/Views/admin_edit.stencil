@@ -1,0 +1,44 @@
+{% extends "master.stencil" %}
+
+{% block body %}
+
+<form method="post">
+	<div class="form-group">
+		<label for="name">Title:</label>
+		<input type="text" name="title" class="form-control" value="{{ story.title }}" />
+	</div>
+
+	<div class="form-group">
+		<label for="name">Strap:</label>
+		<input type="text" name="strap" class="form-control" value="{{ story.strap }}" />
+	</div>
+
+	<div class="form-group">
+		<label for="content">Content:</label>
+		<textarea name="content" rows="8" class="form-control">{{ story.content }}</textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="category">Category:</label>
+		<select name="category" class="form-control">
+			{% for category in categories %}
+			{% if story.category == category %}
+			<option value="{{ category|lowercase }}" selected>{{ category }}</option>
+			{% else %}
+			<option value="{{ category|lowercase }}">{{ category }}</option>
+			{% endif %}
+			{% endfor %}
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label for="name">Slug:</label>
+		<input type="text" name="slug" class="form-control"  value="{{ story.slug }}" />
+	</div>	
+
+	<p><button type="submit" class="btn btn-primary">Submit</button></p>
+</form>
+
+<p><a href="/admin">Cancel</a></p>
+
+{% endblock %}

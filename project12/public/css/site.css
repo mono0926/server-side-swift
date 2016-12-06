@@ -1,0 +1,7 @@
+body {
+  padding-top: 70px;
+}
+
+div.jumbotron > h1 {
+	margin-top: 0;
+}

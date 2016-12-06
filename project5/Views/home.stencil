@@ -1,0 +1,19 @@
+{% extends "master.stencil" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<h1>Files</h1>
+{% for file in files %}
+<a href="/static/uploads/originals/{{ file }}" target="_blank"><img src="/static/uploads/thumbs/{{ file }}" style="border: 1px solid black; margin: 20px;" /></a> 
+{% empty %}
+<li>No files have been uploaded yet.</li>
+{% endfor %}
+</ul>
+
+<form method="post" action="/upload" enctype="multipart/form-data">
+<p><input type="file" name="upload" multiple/></p>
+<p><button type="submit" class="btn">Upload</button></p>
+</form>
+{% endblock %}
+

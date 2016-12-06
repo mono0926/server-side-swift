@@ -1,0 +1,11 @@
+{% extends "master.stencil" %}
+
+{% block body %}
+{% for story in stories %}
+<h2><a href="{{ story|link }}">{{ story.title }}</a></h2>
+{{ story.strap|markdown }}
+
+{% endfor %}
+
+{% endblock %}
+

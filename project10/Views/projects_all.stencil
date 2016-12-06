@@ -1,0 +1,20 @@
+{% extends "master.stencil" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+<h1>All projects</h1>
+<ul>
+{% for project in projects %}
+	<li class="lead">
+		<strong>{{ project.value.name }}</strong><br />
+		{{ project.value.description }}<br />
+		<span class="badge alert-info">{{ project.value.language }}</span> Contact: <a href="https://www.github.com/{{ project.value.owner }}">{{ project.value.owner }}</a>
+
+	</li>
+{% empty %}
+	<li class="lead">There aren't any projects yet. <a href="/projects/new">Create a project now</a>.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

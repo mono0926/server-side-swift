@@ -1,0 +1,16 @@
+{% extends "master.stencil" %}
+
+{% block body %}
+
+<p>Select a story to edit, or <a href="/admin/edit">click here to create a new one</a>.</p>
+
+<ul>
+{% for story in stories %}
+<li><a href="/admin/edit/{{ story.id }}">{{ story.title }}</a></li>
+{% empty %}
+<li><a href="/admin/edit">Create your first story</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+

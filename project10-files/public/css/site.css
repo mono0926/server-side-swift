@@ -1,0 +1,17 @@
+body {
+  padding-top: 70px;
+}
+
+.main-container {
+	padding: 20px;
+
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.main-container > h1 {
+	margin-top: 0;
+	font-size: 400%;
+}
+

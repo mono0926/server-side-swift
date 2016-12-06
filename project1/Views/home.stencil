@@ -1,0 +1,9 @@
+{% extends "master.stencil" %}
+
+{% block body %}
+<h1>Welcome to Million Hairs</h1>
+<p>We provide best-in-class health and wellbeing for all sorts of animals. But mostly beagles.</p>
+<p><a class="btn btn-lg btn-primary" href="/contact" role="button">Call us now &raquo;</a></p>
+{% endblock %}
+
+{% block title %}Welcome{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "master.stencil" %}
+
+{% block title %}{{ message.title }} - {{ forum_name }}{% endblock %}
+
+{% block body %}
+<h1>{{ message.title }}</h1>
+<h2>Posted by {{ message.user}} on {{ message.date|format_date }}</h2>
+
+{{ message.body }}
+
+{% if replies %}
+{% for reply in replies %}
+<h4>Reply from {{ reply.value.user }} on {{ reply.value.date|format_date }}</h4>
+<p>{{ reply.value.body }}</p>
+{% endfor %}
+{% endif %}
+
+<form method="post">
+<h3>Add a new reply</h3>
+<input type="hidden" name="title" value="Reply" />
+<p><textarea name="body" class="form-control" rows="5"></textarea></p>
+<p><input type="submit" class="btn btn-lg" /></p>
+
+{% endblock %}

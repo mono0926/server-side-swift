@@ -1,0 +1,40 @@
+{% extends "master.stencil" %}
+
+{% block title %}Search Projects{% endblock %}
+
+{% block body %}
+<h1>Project search</h1>
+
+<form class="form-inline">
+<p class="lead">Search by language: {% include 'languages.stencil' %}
+<input type="submit" value="Search" class="btn btn-primary" /></p>
+</form>
+
+<div class="row">
+	<div class="col-md-6">
+		<h1>Projects</h1>
+		<ul>
+		{% for project in projects %}
+			<li class="lead">
+				<strong>{{ project.value.name }}</strong> <span class="badge alert-info">{{ project.value.language }}</span> <br />
+				{{ project.value.description }}
+			</li>
+		{% empty %}
+			<li class="lead">No projects found.</li>
+		{% endfor %}
+		</ul>
+	</div>
+
+	<div class="col-md-6">
+		<h1>Coders</h1>
+		<ul>
+		{% for coder in coders %}
+			<li class="lead">
+				<a href="https://www.github.com/{{ coder.value.login }}">{{ coder.value.name }}</a>
+			</li>
+		{% empty %}
+			<li class="lead">No coders found.</li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
